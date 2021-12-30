@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+   <title>대학교 어플리케이션</title>
+   <style>
+      body{
+  
+         margin: 0;
+         overflow-x: hidden;
+         font-family: 'Noto Sans KR', sans-serif;
+      }
+      .tg{
+			border : 1px solid black;
+			border-collapse: collapse;
+         margin: 2rem;
+         
+		}
+      .tg .tg-ihxd {
+			border : 1px solid black;
+         background-color: #00a0d1;
+         color: rgb(255, 255, 255);
+			width: 100px;
+			height: 50px;
+  
+		}
+		.tg .tg-c3ow {
+			border : 1px solid black;
+			height: 50px;
+         
+    
+		}
+
+      .Masthead_Masthead{
+         position: relative;
+      }
+      .Masthead_Masthead::before{
+         width: 100%;
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         left: 0;
+         bottom: 0;
+         background: linear-gradient(
+      120deg,rgba(112,93,80,.8) 0,rgba(112,93,80,.8) 90%),url(../../images/masthead.jpg) 30% no-repeat;
+         background-size: cover;
+         z-index: -1;
+      }
+
+      .Masthead_Masthead .Masthead_content{
+         box-sizing: border-box;
+         width: 71.25rem;
+         margin: 0 auto;
+         padding-top: 4rem;
+         padding-bottom : 4rem;
+         text-align: center;
+      }
+      .Masthead_Masthead .Masthead_content .Masthead_title{
+        
+         font-weight: 800;
+         font-size: 4rem;
+         color: #fff;
+         word-break: keep-all;
+         margin: 0 auto;
+      }
+
+
+
+      /* 포트폴리오 */
+      .Projects_Projects {
+          background-color: #1d809f;
+      }
+
+      .Projects_Projects .Projects_content{
+         box-sizing: border-box;
+         width: 71.25rem;
+         padding: 4rem 2rem;
+         margin: 0 auto;
+      }
+      
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project {
+         padding: 3rem;
+         margin: 0 auto 2rem;
+         border-radius: 1rem;
+         background-color: #fff;
+         box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);    
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_title{
+         padding-bottom: 0.5rem;
+         font-weight: 700;
+         font-size: 2.5rem;
+         color: #222;
+         text-align: center;
+      }
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_period {
+         margin-bottom: 2rem;
+         font-weight: 700;
+         font-size: 1rem;
+         color: #6c757d;
+         text-align: center;
+         opacity: .8;
+      }
+      
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info {
+         display: flex;
+         flex-flow: row wrap;
+         
+     
+      }
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions{
+         text-align: center;
+      }
+      
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_label:hover{
+         color:#f73500;
+      }
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_label {
+         display: inline-block;
+         margin-top: 1rem;
+         margin-bottom: 1rem;
+         width: 30rem;
+         font-weight: 500;
+         font-size: 2rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_value {
+         display: inline-block;
+         width: 30rem;
+         font-weight: 400;
+         font-size: 1.5rem;
+      }
+      /* 사진 */
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description img{
+         margin-top: 2rem;
+         margin-left: 12.5rem;
+      }
+
+      /* 작품설명 */
+          
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info3 .Projects_descriptions .Projects_description .Projects_label {
+         text-align: center;
+         background-color: rgb(13, 197, 142);
+         border-radius: 1rem;
+         display: inline-block;
+         margin-top: 1rem;
+         margin-right: 3rem;
+         margin-bottom: 1rem;
+         margin-left: 5rem;
+         width: 20rem;
+         font-weight: 500;
+         font-size: 1.5rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info3 .Projects_descriptions .Projects_description .Projects_value {
+         display: inline-block;
+         padding-left: 2rem;
+         width: 25rem;
+         font-weight: 400;
+         font-size: 1.5rem;
+      }
+
+      /* 구현 화면 */
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info4 .Projects_descriptions .Projects_description img{
+         margin-top: 2rem;
+         display: block;
+         margin: 0px auto; 
+         height: 350px;
+       
+      }
+ 
+      /* 바닥 */
+      .Footer_Footer {
+         height: 4rem;
+         padding-top: 3rem;
+         background-color: #222;
+         text-align: center;
+      }
+      
+      .Footer_Footer .Footer_copyright {
+         font-weight: 400;
+         font-size: .9rem;
+         color: #f5f5f5;
+         margin-top: 1rem;
+      }
+   </style>
+</head>
+<body>
+
+  <div class="Masthead_Masthead" id="KimGyuSeok">
+      
+      <div class="Masthead_content">
+         <div class="Masthead_title">
+            - 대학교 소개 앱 -
+         </div>
+ 
+      </div>
+  </div>
+  
+   <!-- 포트폴리오 -->
+   <article class="Projects_Projects" id="Projects">  
+      <div class="Projects_content">
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  목차
+               </div>
+
+               <div class="Projects_info">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           1. 추진 일정
+                        </div>
+                        <div class="Projects_label">
+                           2. 구현 환경
+                        </div>
+                        <div class="Projects_label">
+                           3. 작품 설명
+                        </div>
+                        <div class="Projects_label">
+                           4. 구현 화면
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  추진 일정
+               </div>
+
+               <div class="Projects_info">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        
+                        <table class="tg">
+                           <thead>
+                             <tr>
+                               <th class="tg-ihxd" rowspan="2">추진 사항</th>
+                               <th class="tg-ihxd" rowspan="2"> 수행 기간</th>
+                               <th class="tg-ihxd" colspan="8">수행 기간</th>
+                             </tr>
+                             <tr>
+                               <th class="tg-ihxd">1주</th>
+                               <th class="tg-ihxd">2주</th>
+                               <th class="tg-ihxd">3주</th>
+                               <th class="tg-ihxd">4주</th>
+                               <th class="tg-ihxd">5주</th>
+                               <th class="tg-ihxd">6주</th>
+                               <th class="tg-ihxd" colspan="2">7주</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td class="tg-c3ow" rowspan="2">계 획</td>
+                               <td class="tg-c3ow">계획서 작성</td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" colspan="2"></td>
+                             </tr>
+                             <tr>
+                               <td class="tg-c3ow">자료 수집</td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" colspan="2"></td>
+                             </tr>
+                             <tr>
+                               <td class="tg-c3ow">분 석</td>
+                               <td class="tg-c3ow">실행여부 분석</td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" colspan="2"></td>
+                             </tr>
+                             <tr>
+                               <td class="tg-c3ow" rowspan="3">개 발</td>
+                               <td class="tg-c3ow">설 계</td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" ></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" colspan="2"></td>
+                             </tr>
+                             <tr>
+                               <td class="tg-c3ow">기능 구현</td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" colspan="2" style="background-color: rgb(172, 108, 197);"></td>
+                             </tr>
+                             <tr>
+                               <td class="tg-c3ow">DB 구현</td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" ></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" colspan="2" style="background-color: rgb(172, 108, 197);"></td>
+                             </tr>
+                             <tr>
+                               <td class="tg-c3ow" rowspan="2">테스트</td>
+                               <td class="tg-c3ow">시범 운영</td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" ></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" colspan="2"></td>
+                             </tr>
+                             <tr>
+                               <td class="tg-c3ow">수정</td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" style="background-color: rgb(172, 108, 197);"></td>
+                               <td class="tg-c3ow" colspan="2" style="background-color: rgb(172, 108, 197);"></td>
+                             </tr>
+                             <tr>
+                               <td class="tg-c3ow">기능 추가<br>오류 수정</td>
+                               <td class="tg-c3ow">추가 및 수정<br>유지보수</td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow"></td>
+                               <td class="tg-c3ow" colspan="2"></td>
+                             </tr>
+                           </tbody>
+                           </table>                    
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- 3 -->
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 환경
+               </div>
+
+               <div class="Projects_info">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="2.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- 3 -->
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  작품 설명
+               </div>
+
+               <div class="Projects_info3">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           학교소개 
+                        </div>
+                        <div class="Projects_value">
+                           경동대학교 소개 기능
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           캠퍼스정보 
+                        </div>
+                        <div class="Projects_value">
+                           3개 캠퍼스 강의실 위치 및 로드뷰 기능
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           학과소개 
+                        </div>
+                        <div class="Projects_value">
+                           각 학과의 정보 확인 가능 
+
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           교내연락처 
+                        </div>
+                        <div class="Projects_value">
+                           교내 교수님 연락처 확인 기능
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           배달메뉴 
+                        </div>
+                        <div class="Projects_value">
+                           학교 주변 배달 메뉴 및 연락처 기능 
+
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           주간식단표 
+                        </div>
+                        <div class="Projects_value">
+                           주간 식단표 확인 가능
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           수강신청 
+                        </div>
+                        <div class="Projects_value">
+                           수강신청 및 개인 시간표 확인 가능
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           학사일정 
+                        </div>
+                        <div class="Projects_value">
+                           1학기, 2학기의 학사일정 확인 가능 
+                        </div>
+                     </div>     
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- 구현 화면 4 -->
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (학교 소개)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="3.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (캠퍼스 소개)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="4.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (캠퍼스 소개)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="5.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (캠퍼스 소개)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="6.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (캠퍼스 소개)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="7.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (캠퍼스 소개)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="8.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (캠퍼스 소개)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="9.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (학과 소개)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="10.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (교내 연락처)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="11.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (배달 음식 연락처)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="12.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (주간 식단표)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="13.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (수강 신청)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="14.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (수강 신청)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="15.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (수강 신청)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="16.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (수강 신청)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="17.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+                  
+                  <span class="Projects_new-line-chunk">
+                     (학사 일정)
+                  </span>
+               </div>
+               <div class="Projects_info4">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <img src="18.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+      </div>
+   </article>
+
+   <!-- 바닥 -->
+   <footer class="Footer_Footer">
+      
+      <div class="Footer_copyright">© 2021. Kim gyu Seok. All rights reserved.</div>
+   </footer>
+</body>
+</html>

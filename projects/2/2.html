@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+
+   <title>Webfliex</title>
+   <style>
+      body {
+
+         margin: 0;
+         overflow-x: hidden;
+         font-family: 'Noto Sans KR', sans-serif;
+      }
+
+
+      .Masthead_Masthead {
+         position: relative;
+      }
+
+      .Masthead_Masthead::before {
+         width: 100%;
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         left: 0;
+         bottom: 0;
+         background: linear-gradient(120deg, rgba(112, 93, 80, .8) 0, rgba(112, 93, 80, .8) 90%), url(../../images/masthead.jpg) 30% no-repeat;
+         background-size: cover;
+         z-index: -1;
+      }
+
+      /* 제 목 */
+      .Masthead_Masthead .Masthead_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         margin: 0 auto;
+         padding-top: 4rem;
+         padding-bottom: 3rem;
+         text-align: center;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_title {
+
+         font-weight: 800;
+         font-size: 4rem;
+         color: #fff;
+         word-break: keep-all;
+         margin: 0 auto;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_divider {
+         width: 3.25rem;
+         height: 0;
+         margin-top: 1.5rem;
+         margin-bottom: 1.5rem;
+         border: none;
+         border-top: 0.2rem solid #f4623a;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_description {
+         margin: 0 auto 2rem;
+         font-weight: 400;
+         font-size: 1.25rem;
+         color: hsla(0, 0%, 100%, .75);
+         line-height: 1.5;
+      }
+
+
+
+      /* 포트폴리오 */
+      .Projects_Projects {
+         background-color: #1d809f;
+      }
+
+      .Projects_Projects .Projects_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         padding: 4rem 2rem;
+         margin: 0 auto;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project {
+         padding: 3rem;
+         margin: 0 auto 2rem;
+         border-radius: 1rem;
+         background-color: #fff;
+         box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_title {
+         padding-bottom: 0.5rem;
+         font-weight: 700;
+         font-size: 2.5rem;
+         color: #222;
+         text-align: center;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_period {
+         margin-bottom: 2rem;
+         font-weight: 700;
+         font-size: 1rem;
+         color: #6c757d;
+         text-align: center;
+         opacity: .8;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info {
+         display: flex;
+         flex-flow: row wrap;
+
+
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions {
+         text-align: center;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_label:hover {
+         color: #f73500;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_label {
+         display: inline-block;
+         margin-top: 1rem;
+         margin-bottom: 1rem;
+         width: 30rem;
+         font-weight: 500;
+         font-size: 2rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_value {
+         display: inline-block;
+         width: 30rem;
+         font-weight: 400;
+         font-size: 1.5rem;
+      }
+
+
+      /* 기능 소개 화면 */
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info1 .Projects_descriptions .Projects_description img {
+         margin-top: 2rem;
+         display: block;
+         margin: 0px auto;
+
+         height: 350px;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info1 .Projects_descriptions .Projects_description .Projects_content {
+         width: 900px;
+         font-size: 1.2rem;
+      }
+
+
+      /* 구현 화면 */
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info2 .Projects_descriptions .Projects_description img {
+         margin-top: 2rem;
+         display: block;
+         margin: 0px auto;
+         width: 800px;
+         height: 500px;
+      }
+
+      /* 바닥 */
+      .Footer_Footer {
+         height: 4rem;
+         padding-top: 3rem;
+         background-color: #222;
+         text-align: center;
+      }
+
+      .Footer_Footer .Footer_copyright {
+         font-weight: 400;
+         font-size: .9rem;
+         color: #f5f5f5;
+         margin-top: 1rem;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- 제 목 -->
+   <div class="Masthead_Masthead" id="KimGyuSeok">
+      <div class="Masthead_content">
+         <div class="Masthead_title">
+            - Webfliex -
+         </div>
+
+         <hr class="Masthead_divider">
+         <div class=Masthead_description>
+            프로젝트 인원수 : 5명
+            <br><br>
+            프로젝트 맡은 부분
+            <br>
+            회원정보 수정
+            <br>
+            동영상 수정
+            <br>
+            관리자 페이지
+            <br>
+            후기게시판
+            <br>
+
+         </div>
+      </div>
+   </div>
+
+   <!-- 포트폴리오 -->
+   <article class="Projects_Projects" id="Projects">
+      <div class="Projects_content">
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  목차
+               </div>
+
+               <div class="Projects_info">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           1. 구현 기능
+                        </div>
+                        <div class="Projects_label">
+                           2. 이용 화면
+                        </div>
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (로그인)
+                  </span>
+               </div>
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="1.png">
+                     </div>
+                  </div>
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_content">
+                           JSP, Ajax등을 이용하여 프론트엔드를 구현한 후에 MVC 패턴을 이용해서 백엔드를 구현하고 xml 파일을 생성하여 sql문 작성하고 MySQL을 사용하고 후반에
+                           들어서 아마존이라는 서버에 저장하여 사용하였습니다.
+                           <br><br>
+                           회원정보 수정에서는 프로필사진,비밀번호, 선호 카테고리들 만 수정 할 수 있다.
+                           프로필 사진은 용량제한을 설정하여 용량을 초과하면 수정이 안된다.
+                           비밀번호는 변경 버튼을 누르면 다른 창이 하나 더 뜨게 되는데 변경한 비밀번호를 확인 할 때 일치하지 않으면 변경이 안됩니다.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (영상 정보 변경)
+                  </span>
+               </div>
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2.png">
+                     </div>
+                  </div>
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_content">
+                           회원정보수정과 마찬가지로 MVC패턴을 사용하여 구현하였고 DB에서 정보를 가져와서 정보들을 확인할 수 있도록 하고 후에는 아마존 서버에 저장하여 불러오도록 구현하였다.
+
+                           <br><br>
+                           동영상 정보 수정창에서 수정이 가능한 부분은 제목과 내용부분이며 동영상의 정보와 조회정보를 나누어서 사람들이 나의 동영상을 얼마나 많이 보고 좋아해주는지 편하게 알 수
+                           있도록 나눠보았다.
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (게시판 글 작성)
+                  </span>
+               </div>
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="3.png">
+                     </div>
+                  </div>
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_content">
+                           Mybatis를 이용하여 DB에 저장 되어 있는 게시물들을 가져와 보여주고, 관리자의 경우 notice의 값을 다르게 설정하여 공지 글을 올릴 수 있게
+                           코딩하였습니다.<br>
+                           페이징을 통하여 한 화면에 게시글은 10개로 하고 공지 글은 제한이 없이 올릴 수 있게 하였습니다.<br>
+                           후기 등록 화면은 네이버 스마트에디터를 사용하여 글과 사진을 올리고 편집이 가능하게 하였습니다.<br>
+                           기존의 JSP로만 만들어져 있던 단순한 게시판을 jquery UI와 Bootstrap를 활용하여 디자인을 하였습니다.<br>
+                           회원정보수정과 마찬가지로 MVC패턴을 사용하여 구현하였고 DB에서 정보를 가져와서 정보들을 확인할 수 있도록 하고 후에는 아마존 서버에 저장하여 불러오도록 구현하였다.
+
+                           <br><br>
+                           대중적인 게시판 화면을 구현하여 누구나 쉽게 사용할 수 있도록 구현하였습니다 글의 삭제나 등록은 당사자만 가능하고 관리자는 게시판 관리를 위해 다 지울 수 있게 권한을
+                           설정 하였습니다.
+
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (게시판 글 수정)
+                  </span>
+               </div>
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="4.png">
+                     </div>
+                  </div>
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_content">
+                           MVC 모델을 이용하였고, 기존의 JSP로만 만들어져 있던 단순한 게시판을 jquery UI와 Bootstrap를 사용하여 디자인을 하였고, Mybatis를 이용하여
+                           DB에 저장 되어 있는 해당 게시물의 내용을 가져왔습니다.
+
+
+                           <br><br>
+                           작성한 게시글을 수정 및 삭제가 가능하며 추천을 할 수 있는데 횟수 제한을 걸어서 추천과 비 추천은 한 번씩만 누르기가 가능하며 게시글을 작성한 당사자가 아니면 삭제
+                           및 수정이 불가능합니다.
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (게시판 댓글 작성)
+                  </span>
+               </div>
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="5.png">
+                     </div>
+                  </div>
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_content">
+                           MVC 모델을 이용하였고, 기존의 JSP로만 만들어져 있던 단순한 게시판을 jquery UI와 Bootstrap를 사용하여 디자인을 하였고, Mybatis를 이용하여
+                           DB에 저장 되어 있는 해당 게시물의 내용을 가져왔습니다.
+
+
+
+                           <br><br>
+                           작성한 게시글에 댓글 및 대 댓글을 작성 가능하며 추천을 할 수 있는데 횟수 제한을 걸어서 추천과 비 추천은 한 번씩만 누르기가 가능합니다.
+
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (게시판 댓글 삭제 및 수정)
+                  </span>
+               </div>
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="6.png">
+                     </div>
+                  </div>
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_content">
+                           MVC 모델을 이용하였고, 기존의 JSP로만 만들어져 있던 단순한 게시판을 jquery UI와 Bootstrap를 사용하여 디자인을 하였고, Mybatis를 이용하여
+                           DB에 저장 되어 있는 해당 게시물의 내용을 가져왔습니다.
+                           <br><br>
+                           게시글에 댓글을 작성 후 수정 및 삭제가 가능하며 댓글을 작성한 당사자가 아니면 삭제 및 수정이 불가능합니다.
+
+
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자 페이지)
+                  </span>
+               </div>
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="7.png">
+
+                     </div>
+                  </div>
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_content">
+                           MVC 모델을 이용하여 회원,동영상,게시판 관리자 페이지를 만들었습니다
+                           <br>
+                           마스터 관리자는 회원에게 관리자 권한을 줄 수 있습니다.(권한을 받은 회원은 다른 회원의 올린 동영상 및 글 수정,삭제가 가능합니다.)
+                           <br>
+                           동영상 및 게시글 제목을 클릭 하면 좀더 상세한 정보를 볼 수 있습니다.
+                           <br>
+                           기존의 JSP로만 만들어져 있던 단순한 게시판을 jquery UI와 CSS를 적용했습니다.
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (메인 화면)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_1.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (로그인)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_2.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (회원가입)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_3.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (회원 정보 수정)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_4.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (메인 화면)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_5.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (동영상 등록)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_6.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (동영상 시청)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_7.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자-회원관리)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_8.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자-비디오관리)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_9.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자-게시판관리)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_10.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자-게시판관리)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_11.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자-게시판관리)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_11.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (후기 게시판)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_12.png">
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (게시판 내용)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_13.png">
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (게시판 댓글)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2_14.png">
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+
+
+
+      </div>
+   </article>
+
+   <!-- 바닥 -->
+   <footer class="Footer_Footer">
+
+      <div class="Footer_copyright">© 2021. Kim gyu Seok. All rights reserved.</div>
+   </footer>
+</body>
+
+</html>

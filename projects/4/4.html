@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+
+   <title>Webfliex</title>
+   <style>
+      body {
+
+         margin: 0;
+         overflow-x: hidden;
+         font-family: 'Noto Sans KR', sans-serif;
+      }
+
+
+      .Masthead_Masthead {
+         position: relative;
+      }
+
+      .Masthead_Masthead::before {
+         width: 100%;
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         left: 0;
+         bottom: 0;
+         background: linear-gradient(120deg, rgba(112, 93, 80, .8) 0, rgba(112, 93, 80, .8) 90%), url(../../images/masthead.jpg) 30% no-repeat;
+         background-size: cover;
+         z-index: -1;
+      }
+
+      /* 제 목 */
+      .Masthead_Masthead .Masthead_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         margin: 0 auto;
+         padding-top: 4rem;
+         padding-bottom: 3rem;
+         text-align: center;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_title {
+
+         font-weight: 800;
+         font-size: 4rem;
+         color: #fff;
+         word-break: keep-all;
+         margin: 0 auto;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_divider {
+         width: 3.25rem;
+         height: 0;
+         margin-top: 1.5rem;
+         margin-bottom: 1.5rem;
+         border: none;
+         border-top: 0.2rem solid #f4623a;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_description {
+         margin: 0 auto 2rem;
+         font-weight: 400;
+         font-size: 1.25rem;
+         color: hsla(0, 0%, 100%, .75);
+         line-height: 1.5;
+      }
+
+
+
+      /* 포트폴리오 */
+      .Projects_Projects {
+         background-color: #1e2527;
+      }
+
+      .Projects_Projects .Projects_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         padding: 4rem 2rem;
+         margin: 0 auto;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project {
+         padding: 3rem;
+         margin: 0 auto 2rem;
+         border-radius: 1rem;
+         background-color: #fff;
+         box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_title {
+         padding-bottom: 0.5rem;
+         font-weight: 700;
+         font-size: 2.5rem;
+         color: #222;
+         text-align: center;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_period {
+         margin-bottom: 2rem;
+         font-weight: 700;
+         font-size: 1rem;
+         color: #6c757d;
+         text-align: center;
+         opacity: .8;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info {
+         display: flex;
+         flex-flow: row wrap;
+
+
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions {
+         text-align: center;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_label:hover {
+         color: #f73500;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_label {
+         display: inline-block;
+         margin-top: 1rem;
+         margin-bottom: 1rem;
+         width: 20rem;
+         font-weight: 500;
+         font-size: 2rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_value {
+         display: inline-block;
+         width: 30rem;
+         font-weight: 400;
+         font-size: 1.5rem;
+      }
+
+
+      /* 순서도/ERD */
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info1 .Projects_descriptions .Projects_description img {
+         display: block;
+         margin: 1.5rem auto;
+         height: 550px;
+      }
+
+      /* 구현 기능 */
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info2 .Projects_descriptions .Projects_description .Projects_label {
+         text-align: center;
+         background-color: rgb(13, 197, 142);
+         border-radius: 1rem;
+         display: inline-block;
+         margin: 2rem auto; 
+         width: 15rem;
+         
+         font-weight: 500;
+         font-size: 1.5rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info2 .Projects_descriptions .Projects_description .Projects_value {
+         display: inline-block;
+         padding-left: 2rem;
+         width: 35rem;
+
+         font-weight: 400;
+         font-size: 1.5rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info2 .Projects_descriptions .Projects_description img {
+         margin-top: 2rem;
+         display: block;
+         margin: 0px auto;
+         width: 1000px;
+         height: 700px;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info3 .Projects_descriptions .Projects_description img {
+         margin-top: 2rem;
+         display: block;
+         margin: 0px auto;
+         max-width: 800px;
+         height: 500px;
+      }
+
+      /* 바닥 */
+      .Footer_Footer {
+         height: 4rem;
+         padding-top: 3rem;
+         background-color: #222;
+         text-align: center;
+      }
+
+      .Footer_Footer .Footer_copyright {
+         font-weight: 400;
+         font-size: .9rem;
+         color: #f5f5f5;
+         margin-top: 1rem;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- 제 목 -->
+   <div class="Masthead_Masthead" id="KimGyuSeok">
+      <div class="Masthead_content">
+         <div class="Masthead_title">
+            - 마트 관리 시스템 -
+         </div>
+
+         <hr class="Masthead_divider">
+         <div class=Masthead_description>
+            프로젝트 인원 : 6명
+            <br><br>
+            프로젝트 맡은 부분
+            <br>
+            상품 관리
+            <br>
+            매출 관리
+            <br>
+            재고 관리            
+
+         </div>
+      </div>
+   </div>
+
+   <!-- 포트폴리오 -->
+   <article class="Projects_Projects" id="Projects">
+      <div class="Projects_content">
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  목차
+               </div>
+
+               <div class="Projects_info">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           1. 순서도/ERD
+                        </div>
+                        <div class="Projects_label">
+                           2. 구현 기능
+                        </div>
+                        <div class="Projects_label">
+                           3. 화면
+                        </div>
+
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  순서도/ERD
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="1.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (비회원)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           계정 찾기 
+                        </div>
+                        <div class="Projects_value">
+                           이름과 전화번호를 통해 계정을 찾을 수 있습니다.
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           회원 가입
+                        </div>
+                        <div class="Projects_value">
+                           몇 가지 인적 사항을 입력해 가입할 수 있습니다.
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           로그인
+                        </div>
+                        <div class="Projects_value">              
+                          회원가입을 통해 저장된 개인 정보를 시스템에 접근하여
+                          회원용/관리자용으로 나눕니다.
+                        </div>           
+                     </div>  
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (비회원 - 관리자 | 회원관리)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2.jpg">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (로그인)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="3.jpg">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (회원가입)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="4.jpg">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (회 원)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           상품 검색 
+                        </div>
+                        <div class="Projects_value">
+                           초성이나 대체어로 검색이 가능합니다.
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           장바구니 담기
+                        </div>
+                        <div class="Projects_value">
+                           결제 전 장바구니 담기 기능을 제공합니다.
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           상품 결제
+                        </div>
+                        <div class="Projects_value">              
+                          카드/현금 배송 옵션을 제공합니다.
+                        </div>           
+                     </div>  
+
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           결제 내역 조회
+                        </div>
+                        <div class="Projects_value">              
+                          최근 구매 내역과 지난 구매 내역을 볼 수 있습니다.
+                        </div>           
+                     </div>  
+                     
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           개인 정보 조회
+                        </div>
+                        <div class="Projects_value">              
+                          개인 정보를 조회 할 수 있습니다.
+                        </div>           
+                     </div>  
+                  </div>
+               </div>
+            </div>
+         </div>
+        
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (회원 - 상품검색 | 장바구니)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="5.jpg">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (회원 - 상품검색)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="6.jpg">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (회원 - 장바구니)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="7.jpg">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+                  
+                  <div class="Projects_descriptions">                
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           회원 정보 조회 
+                        </div>
+                        <div class="Projects_value">
+                           회원가입 한 모든 회원의 기본 정보를 볼 수 있습니다.
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           상품 관리
+                        </div>
+                        <div class="Projects_value">
+                           새로운 상품을 등록, 수정, 삭제 할 수 있습니다.
+                        </div>
+                     </div>
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           매출 관리
+                        </div>
+                        <div class="Projects_value">              
+                          현금 매출과 카드 매출을 나누어 확인할 수 있습니다.
+                        </div>           
+                     </div>  
+
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           재고 관리
+                        </div>
+                        <div class="Projects_value">              
+                           물량의 수량을 확인할 수 있고 추가로 입고할 수 있습니다.
+                        </div>           
+                     </div>  
+                          
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자 - 상품 등록)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="8.jpg">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  이용 기능
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자 - 상품 등록)
+                  </span>
+               </div>
+               <div class="Projects_info2">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="9.jpg">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자 - 메인 화면)
+                  </span>
+               </div>
+               <div class="Projects_info3">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="10.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자 - 회원 정보 조회)
+                  </span>
+               </div>
+               <div class="Projects_info3">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="11.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자 - 상품 등록)
+                  </span>
+               </div>
+               <div class="Projects_info3">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="display: inline-block; margin-left: 6rem;" src="12.png">
+                        <img style="display: inline-block;" src="13.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자 - 상품 수정)
+                  </span>
+               </div>
+               <div class="Projects_info3">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="display: inline-block; width: 300px; margin-left: 3rem;" src="14.png">
+                        <img style="display: inline-block; width: 300px;"  src="15.png">
+                        <img style="display: inline-block;  width: 300px;" src="16.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  구현 화면
+               </div>
+               <div class="Projects_period">
+
+                  <span class="Projects_new-line-chunk">
+                     (관리자 - 상품 리스트)
+                  </span>
+               </div>
+               <div class="Projects_info3">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="17.png">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+
+      </div>
+   </article>
+
+   <!-- 바닥 -->
+   <footer class="Footer_Footer">
+
+      <div class="Footer_copyright">© 2021. Kim gyu Seok. All rights reserved.</div>
+   </footer>
+</body>
+
+</html>
