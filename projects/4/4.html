@@ -18,6 +18,59 @@
       }
 
 
+       /* 헤더부분 */
+       .Header_Header{
+         position:fixed;
+         top:0;
+         left:0;
+         right:0;
+         background-color: #fff;
+         box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+         z-index:10;
+      }
+
+      .Header_Header .Header_has-background-color {
+         background-color: #fff;
+         box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+      }
+      .Header_Header .Header_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         height:4.5rem;
+         padding: 1.25rem 2rem;
+         margin: 0 auto;
+      }
+      .Header_Header .Header_content .Header_title{
+         display: inline-block;
+         font-weight: 700;
+         font-size: 1.5rem;
+         color: #453a33;
+         line-height: 2rem;
+         cursor: pointer;
+      }
+      .Header_Header .Header_content .Header_navigation{
+         text-align: center;
+      }
+
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu{
+         display: inline-block;
+         padding:0 1rem;
+         font-weight: 700;
+         font-size: 1rem;
+         /* color: #ffffffb3; */
+         color: #453a33;
+         line-height: 2rem;
+         cursor: pointer;
+         
+      }
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu a{
+         color: #453a33;
+         text-decoration : none;
+      }
+
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu a:hover{
+         color:rgb(255, 94, 0);
+      }
       .Masthead_Masthead {
          position: relative;
       }
@@ -206,6 +259,16 @@
 </head>
 
 <body>
+   <header class="Header_Header">
+      <div class="Header_content">
+         <div class="Header_navigation">
+            <div class="Header_navigation_menu">
+               <a href="../../index.html">Home</a>
+            </div>
+
+         </div>
+   </div>
+  </header>
    <!-- 제 목 -->
    <div class="Masthead_Masthead" id="KimGyuSeok">
       <div class="Masthead_content">

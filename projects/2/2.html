@@ -18,6 +18,60 @@
       }
 
 
+
+       /* 헤더부분 */
+       .Header_Header{
+         position:fixed;
+         top:0;
+         left:0;
+         right:0;
+         background-color: #fff;
+         box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+         z-index:10;
+      }
+
+      .Header_Header .Header_has-background-color {
+         background-color: #fff;
+         box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+      }
+      .Header_Header .Header_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         height:4.5rem;
+         padding: 1.25rem 2rem;
+         margin: 0 auto;
+      }
+      .Header_Header .Header_content .Header_title{
+         display: inline-block;
+         font-weight: 700;
+         font-size: 1.5rem;
+         color: #453a33;
+         line-height: 2rem;
+         cursor: pointer;
+      }
+      .Header_Header .Header_content .Header_navigation{
+         text-align: center;
+      }
+
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu{
+         display: inline-block;
+         padding:0 1rem;
+         font-weight: 700;
+         font-size: 1rem;
+         /* color: #ffffffb3; */
+         color: #453a33;
+         line-height: 2rem;
+         cursor: pointer;
+         
+      }
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu a{
+         color: #453a33;
+         text-decoration : none;
+      }
+
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu a:hover{
+         color:rgb(255, 94, 0);
+      }
       .Masthead_Masthead {
          position: relative;
       }
@@ -184,6 +238,16 @@
 </head>
 
 <body>
+   <header class="Header_Header">
+      <div class="Header_content">
+         <div class="Header_navigation">
+            <div class="Header_navigation_menu">
+               <a href="../../index.html">Home</a>
+            </div>
+
+         </div>
+   </div>
+  </header>
    <!-- 제 목 -->
    <div class="Masthead_Masthead" id="KimGyuSeok">
       <div class="Masthead_content">
@@ -261,11 +325,11 @@
                   <div class="Projects_descriptions">
                      <div class="Projects_description">
                         <div class="Projects_content">
-                           JSP, Ajax등을 이용하여 프론트엔드를 구현한 후에 MVC 패턴을 이용해서 백엔드를 구현하고 xml 파일을 생성하여 sql문 작성하고 MySQL을 사용하고 후반에
+                           JSP, Ajax등을 이용하여 프론트엔드를 구현한 후에 MVC 패턴을 이용해서 백엔드를 구현하고 xml 파일을 생성하여 sql문 작성했습니다. MySQL을 사용하다 후반에
                            들어서 아마존이라는 서버에 저장하여 사용하였습니다.
                            <br><br>
-                           회원정보 수정에서는 프로필사진,비밀번호, 선호 카테고리들 만 수정 할 수 있다.
-                           프로필 사진은 용량제한을 설정하여 용량을 초과하면 수정이 안된다.
+                           회원정보 수정에서는 프로필사진,비밀번호, 선호 카테고리들 만 수정 할 수 있습니다.
+                           프로필 사진은 용량제한을 설정하여 용량을 초과하면 수정이 안됩니다.
                            비밀번호는 변경 버튼을 누르면 다른 창이 하나 더 뜨게 되는데 변경한 비밀번호를 확인 할 때 일치하지 않으면 변경이 안됩니다.
                         </div>
                      </div>
@@ -296,11 +360,10 @@
                   <div class="Projects_descriptions">
                      <div class="Projects_description">
                         <div class="Projects_content">
-                           회원정보수정과 마찬가지로 MVC패턴을 사용하여 구현하였고 DB에서 정보를 가져와서 정보들을 확인할 수 있도록 하고 후에는 아마존 서버에 저장하여 불러오도록 구현하였다.
+                           회원정보수정과 마찬가지로 MVC패턴을 사용하여 구현하였고 DB에서 정보를 가져와서 정보들을 확인할 수 있도록 하고 후에는 아마존 서버에 저장하여 불러오도록 구현하였습니다.
 
                            <br><br>
-                           동영상 정보 수정창에서 수정이 가능한 부분은 제목과 내용부분이며 동영상의 정보와 조회정보를 나누어서 사람들이 나의 동영상을 얼마나 많이 보고 좋아해주는지 편하게 알 수
-                           있도록 나눠보았다.
+                           동영상 정보 수정창에서 수정이 가능한 부분은 제목과 내용부분이며 동영상의 정보와 조회정보를 나누어서 사람들이 나의 동영상을 얼마나 많이 보고 좋아해주는지 편하게 알 수 있도록 나눠보았습니다.
 
                         </div>
                      </div>
@@ -336,7 +399,7 @@
                            페이징을 통하여 한 화면에 게시글은 10개로 하고 공지 글은 제한이 없이 올릴 수 있게 하였습니다.<br>
                            후기 등록 화면은 네이버 스마트에디터를 사용하여 글과 사진을 올리고 편집이 가능하게 하였습니다.<br>
                            기존의 JSP로만 만들어져 있던 단순한 게시판을 jquery UI와 Bootstrap를 활용하여 디자인을 하였습니다.<br>
-                           회원정보수정과 마찬가지로 MVC패턴을 사용하여 구현하였고 DB에서 정보를 가져와서 정보들을 확인할 수 있도록 하고 후에는 아마존 서버에 저장하여 불러오도록 구현하였다.
+                           회원정보수정과 마찬가지로 MVC패턴을 사용하여 구현하였고 DB에서 정보를 가져와서 정보들을 확인할 수 있도록 하고 후에는 아마존 서버에 저장하여 불러오도록 구현하였습니다.
 
                            <br><br>
                            대중적인 게시판 화면을 구현하여 누구나 쉽게 사용할 수 있도록 구현하였습니다 글의 삭제나 등록은 당사자만 가능하고 관리자는 게시판 관리를 위해 다 지울 수 있게 권한을
