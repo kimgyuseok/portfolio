@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+
+   <title>Webfliex</title>
+   <style>
+      body {
+
+         margin: 0;
+         overflow-x: hidden;
+         font-family: 'Noto Sans KR', sans-serif;
+      }
+
+
+       /* 헤더부분 */
+       .Header_Header{
+         position:fixed;
+         top:0;
+         left:0;
+         right:0;
+         background-color: #fff;
+         box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+         z-index:10;
+      }
+
+      .Header_Header .Header_has-background-color {
+         background-color: #fff;
+         box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+      }
+      .Header_Header .Header_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         height:4.5rem;
+         padding: 1.25rem 2rem;
+         margin: 0 auto;
+      }
+      .Header_Header .Header_content .Header_title{
+         display: inline-block;
+         font-weight: 700;
+         font-size: 1.5rem;
+         color: #453a33;
+         line-height: 2rem;
+         cursor: pointer;
+      }
+      .Header_Header .Header_content .Header_navigation{
+         text-align: center;
+      }
+
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu{
+         display: inline-block;
+         padding:0 1rem;
+         font-weight: 700;
+         font-size: 1rem;
+         /* color: #ffffffb3; */
+         color: #453a33;
+         line-height: 2rem;
+         cursor: pointer;
+         
+      }
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu a{
+         color: #453a33;
+         text-decoration : none;
+      }
+
+      .Header_Header .Header_content .Header_navigation .Header_navigation_menu a:hover{
+         color:rgb(255, 94, 0);
+      }
+      .Masthead_Masthead {
+         position: relative;
+      }
+
+      .Masthead_Masthead::before {
+         width: 100%;
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         left: 0;
+         bottom: 0;
+         background: linear-gradient(120deg, rgba(112, 93, 80, .8) 0, rgba(112, 93, 80, .8) 90%), url(../../images/masthead.jpg) 30% no-repeat;
+         background-size: cover;
+         z-index: -1;
+      }
+
+      /* 제 목 */
+      .Masthead_Masthead .Masthead_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         margin: 0 auto;
+         padding-top: 4rem;
+         padding-bottom: 3rem;
+         text-align: center;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_title {
+
+         font-weight: 800;
+         font-size: 4rem;
+         color: #fff;
+         word-break: keep-all;
+         margin: 0 auto;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_divider {
+         width: 3.25rem;
+         height: 0;
+         margin-top: 1.5rem;
+         margin-bottom: 1.5rem;
+         border: none;
+         border-top: 0.2rem solid #f4623a;
+      }
+
+      .Masthead_Masthead .Masthead_content .Masthead_description {
+         margin: 0 auto 2rem;
+         font-weight: 400;
+         font-size: 1.25rem;
+         color: hsla(0, 0%, 100%, .75);
+         line-height: 1.5;
+      }
+
+
+
+      /* 포트폴리오 */
+      .Projects_Projects {
+         background-color: #1e2527;
+      }
+
+      .Projects_Projects .Projects_content {
+         box-sizing: border-box;
+         width: 71.25rem;
+         padding: 4rem 2rem;
+         margin: 0 auto;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project {
+         padding: 3rem;
+         margin: 0 auto 2rem;
+         border-radius: 1rem;
+         background-color: #fff;
+         box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_title {
+         padding-bottom: 0.5rem;
+         font-weight: 700;
+         font-size: 2.5rem;
+         color: #222;
+         text-align: center;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_period {
+         margin-bottom: 2rem;
+         font-weight: 700;
+         font-size: 1rem;
+         color: #6c757d;
+         text-align: center;
+         opacity: .8;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info {
+         display: flex;
+         flex-flow: row wrap;
+
+
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions {
+         text-align: left;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_label:hover {
+         color: #f73500;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_label {
+         display: inline-block;
+         margin-top: 1rem;
+         margin-bottom: 1rem;
+         width: 20rem;
+         font-weight: 500;
+         font-size: 2rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info .Projects_descriptions .Projects_description .Projects_value {
+         display: inline-block;
+         width: 30rem;
+         font-weight: 400;
+         font-size: 1.5rem;
+      }
+
+
+      /* 순서도/ERD */
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info1 .Projects_descriptions .Projects_description img {
+         display: block;
+         margin: 1.5rem auto;
+         height: 550px;
+      }
+
+      /* 구현 기능 */
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info2 .Projects_descriptions .Projects_description .Projects_label {
+         text-align: center;
+         background-color: rgb(13, 197, 142);
+         border-radius: 1rem;
+         display: inline-block;
+         margin: 2rem auto; 
+         width: 15rem;
+         
+         font-weight: 500;
+         font-size: 1.5rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info2 .Projects_descriptions .Projects_description .Projects_value {
+         display: inline-block;
+         padding-left: 2rem;
+         width: 35rem;
+
+         font-weight: 400;
+         font-size: 1.5rem;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info2 .Projects_descriptions .Projects_description img {
+         margin-top: 2rem;
+         display: block;
+         margin: 0px auto;
+         width: 1000px;
+         height: 700px;
+      }
+
+      .Projects_Projects .Projects_content .Projects_projects .Projects_project .Projects_info3 .Projects_descriptions .Projects_description img {
+         margin-top: 2rem;
+         display: block;
+         margin: 0px auto;
+         max-width: 800px;
+         height: 500px;
+      }
+
+      /* 바닥 */
+      .Footer_Footer {
+         height: 4rem;
+         padding-top: 3rem;
+         background-color: #222;
+         text-align: center;
+      }
+
+      .Footer_Footer .Footer_copyright {
+         font-weight: 400;
+         font-size: .9rem;
+         color: #f5f5f5;
+         margin-top: 1rem;
+      }
+   </style>
+</head>
+
+<body>
+   <header class="Header_Header">
+      <div class="Header_content">
+         <div class="Header_navigation">
+            <div class="Header_navigation_menu">
+               <a href="../../index.html">Home</a>
+            </div>
+
+         </div>
+   </div>
+  </header>
+   <!-- 제 목 -->
+   <div class="Masthead_Masthead" id="KimGyuSeok">
+      <div class="Masthead_content">
+         <div class="Masthead_title">
+            -  TRACO:여행을 쫓아라 -
+         </div>
+
+         <hr class="Masthead_divider">
+         <div class=Masthead_description>
+            프로젝트 인원 : 5명
+            <br><br>
+            프로젝트 맡은 부분
+            <br>
+            메인 페이지 구현
+            <br>
+            커뮤니티 페이지 구현
+            <br>
+            회원 회원가입 • 로그인 구현
+
+         </div>
+      </div>
+   </div>
+
+   <!-- 포트폴리오 -->
+   <article class="Projects_Projects" id="Projects">
+      <div class="Projects_content">
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  목차
+               </div>
+
+               <div class="Projects_info">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <div class="Projects_label">
+                           1. 주제 선정 및 기획
+                        </div>
+                        <div class="Projects_label">
+                           2. 벤치마킹 
+                        </div>
+                        <div class="Projects_label">
+                           3. 팀별 업무 분담
+                        </div>
+                        <div class="Projects_label">
+                           4. 화면 설계       
+                        </div>
+                        <div class="Projects_label">
+                           5. ERD 설계
+                        </div>
+                        <div class="Projects_label">
+                           6. 프로젝트 구현
+                        </div>
+                       
+
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  주제 선정 및 기획
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="1.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  주제 선정 및 기획
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img src="2.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  벤치마킹
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 950px" src="3.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  팀별 업무 분담
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="4.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  화면 설계
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="5.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  ERD 설계
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="6.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="7.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="8.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="9.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="10.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="10.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="11.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="12.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="13.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="14.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="15.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="16.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="17.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="18.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="19.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="20.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="21.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="22.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="23.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="24.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="25.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="26.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="27.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="28.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="29.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="30.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="31.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="32.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="33.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+       
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="34.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+         <div class="Projects_projects">
+            <div class="Projects_project">
+
+               <div class="Projects_title">
+                  프로젝트 구현
+               </div>
+
+               <div class="Projects_info1">
+
+                  <div class="Projects_descriptions">
+                     <div class="Projects_description">
+                        <img style="width: 1000px" src="35.jpg">
+                     </div>
+                  </div>    
+               </div>
+            </div>
+         </div>
+
+
+      </div>
+   </article>
+
+   <!-- 바닥 -->
+   <footer class="Footer_Footer">
+
+      <div class="Footer_copyright">© 2021. Kim gyu Seok. All rights reserved.</div>
+   </footer>
+</body>
+
+</html>
